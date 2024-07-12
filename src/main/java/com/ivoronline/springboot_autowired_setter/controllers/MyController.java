@@ -13,13 +13,30 @@ public class MyController {
   MyService myService;
 
   //=======================================================================
-  // SETTER
+  // SET MY SERVICE
   //=======================================================================
   @Autowired
   public void setMyService(MyService myService) {
+    System.out.println("setMyService");
     this.myService = myService;
   }
 
+  //=======================================================================
+  // CALL ME
+  //=======================================================================
+  @Autowired
+  public void callMe(MyService myService) {
+    System.out.print("callMe: ");
+    System.out.println(myService.sayHello());
+  }
+  
+  //=======================================================================
+  // DONT CALL ME
+  //=======================================================================
+  public void dontCallMe(MyService myService) {
+    System.out.println("dontCallMe");
+  }
+  
   //=======================================================================
   // HELLO
   //=======================================================================

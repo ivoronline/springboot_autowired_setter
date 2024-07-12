@@ -5,6 +5,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class MyService {
 
+  //PROPERTIES
+  public String name = "John";
+
   //=======================================================================
   // SAY HELLO
   //=======================================================================
